@@ -1,0 +1,98 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+#logo img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#logo p{
+    font-family: 'Lilita One', sabs-serif;
+    font-size: 1.5rem;
+    color: rgb(254, 204, 87);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuHamburguer img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#menu ul{
+    display: flex;
+    gap: 10%;
+}
+
+#menu li{
+    list-style: none;
+}
+
+#destaque img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card{
+    border: 1px solid rgb(254, 204, 87);
+    border-radius: 15px;
+    display: flex;
+}
+
+.card img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px){
+    #menu{
+        display: none;
+    }
+
+    body{
+        text-align: center;
+    }
+
+    #areaCards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px){
+    #menuHamburguer{
+        display: none;
+    }
+
+    #menu{
+        width: 50%;
+    }
+
+    #destaque{
+        display: flex;
+    }
+
+    #areaCards{
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+}
+
+@media (min-width: 1024px){
+
+}
