@@ -6,23 +6,34 @@ body{
     display: flex;
     align-items: center;
     width: 20%;
+    max-width: 20rem;
 }
 
 #logo img{
-    max-width: 100%;
+    width: clamp(5rem, 10vw, 10rem);
     height: auto;
     display: block;
 }
 
 #logo p{
-    font-family: 'Lilita One', sabs-serif;
-    font-size: 1.5rem;
+    font-family: 'Lilita One', sans-serif;
+    font-size: clamp(2rem, 2.5vw, 5rem);
     color: rgb(254, 204, 87);
 }
 
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#menuHamburguer{
+    display: flex;
+    height: 10%;
+    max-height: 2rem;
+    width: 7%;
+    max-width: 2rem;
+    height: auto;
 }
 
 #menuHamburguer img{
@@ -44,19 +55,46 @@ header{
     max-width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+}
+
+#destaque h1{
+    font-size: clamp(2rem, 2.5vw, 5rem);
+}
+
+#destaque p{
+    font-size: clamp(1.5rem, 2vw, 4rem);
+}
+
+#areaCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgb(254, 204, 87);
     border-radius: 15px;
-    display: flex;
+    width: 60%;
+    max-width: 230rem;
+    overflow: hidden;
 }
 
 .card img{
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.card h2{
+    align-self: center;
+}
+
+#direitos{
+    margin-top: 15%;
 }
 
 @media (max-width: 768px){
@@ -67,10 +105,9 @@ header{
     body{
         text-align: center;
     }
-
-    #areaCards{
-        display: grid;
-        grid-template-columns: 1fr;
+/*arrumar tamanhos para cada media*/
+    #destaque p{
+        margin-bottom: 5%;
     }
 }
 
@@ -85,14 +122,18 @@ header{
 
     #destaque{
         display: flex;
+        flex-direction: row;
     }
 
     #areaCards{
         display: grid;
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 1024px){
-
+    #areaCards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
